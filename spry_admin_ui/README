@@ -1,0 +1,27 @@
+=== WHAT THIS MODULE DOES
+This module contains a single View called "people", hereafter referred to as the People view. The People view is a drop-in replacement for the user-management interface the Drupal core provides at /admin/people. Simply install and enable the module.
+
+=== HOW THIS MODULE WORKS
+The People view is a normal view which uses users as its data source. It provides the viewer with the following niceties:
+
+  * User information is displayed in a table which can be sorted by any
+    column which contains fully normalized data. This functionality is
+    provided by Views.
+  * Users may be filtered by a wide variety of information with the use of
+    exposed filters. This functionality is provided by Views.
+  * The number of users displayed per page may be decided by the viewer.
+    This functionality is provided by Views.
+  * The viewer may perform batch operations on selections of users. This
+    functionality is provided by Views Bulk Operations.
+
+=== POST-FEATURES MODIFICATIONS
+
+----- Theming
+The large quantity of exposed filters looks ugly when it's not themed. Normally this would be handled by the theme, but since this is an administrative interface the Seven theme will be used. We don't want to customize the Seven theme because then we have to maintain it, so all theming has to be handled here in the module instead.
+
+To do this, hook_views_post_render is implemented in the module file. It adds a CSS file to Drupal's CSS queue which handles basic theming of the exposed filters.
+
+
+=== RELEASE NOTES
+
+1.0		The first release.

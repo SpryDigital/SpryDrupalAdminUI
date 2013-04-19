@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file
+ * Code for the Administrative User Interfaces feature.
+ */
+
+include_once 'spry_admin_ui.features.inc';
+
+function spry_admin_ui_views_post_render(&$view, &$output, &$cache) {
+  if($view->name == "people" ) {
+    drupal_add_css(drupal_get_path("module", "spry_admin_ui") . "/css/people.css", "file");
+  }
+}
