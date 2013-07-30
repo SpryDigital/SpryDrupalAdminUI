@@ -1,0 +1,46 @@
+/* Make the environment indicator look just a bit more like the rest of the theme. */
+body div#environment-indicator {
+  font-weight: normal;
+  font-family: "Open Sans";
+}
+
+/* Fix menu items that aren't links in the administration menu. */
+body #admin-menu span {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.view-people.view-display-id-page .views-exposed-widget,
+.view-content.view-display-id-page .views-exposed-widget {
+  width: 16.66%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.view-people.view-display-id-page .views-exposed-widget .form-item,
+.view-content.view-display-id-page .views-exposed-widget .form-item {
+  padding-right: 0;
+}
+
+.view-people.view-display-id-page .views-exposed-widget .form-item,
+.view-content.view-display-id-page .views-exposed-widget .form-item,
+.view-people.view-display-id-page .views-exposed-widget input,
+.view-content.view-display-id-page .views-exposed-widget input {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.view-people.view-display-id-page .views-exposed-widget.views-submit-button,
+.view-content.view-display-id-page .views-exposed-widget.views-submit-button {
+  float: right;
+  clear: both;
+  text-align: right;
+}
+
+.view-people.view-display-id-page .views-exposed-widget.views-submit-button input,
+.view-content.view-display-id-page .views-exposed-widget.views-submit-button input {
+  margin-right: 0;
+}
