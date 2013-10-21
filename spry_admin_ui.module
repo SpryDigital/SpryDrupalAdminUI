@@ -5,3 +5,11 @@
  */
 
 include_once 'spry_admin_ui.features.inc';
+
+/**
+* Implementation of hook_menu_alter().
+*/
+function spry_admin_ui_menu_alter(&$items) {
+  $items['admin/people/create']['page callback'] = 'user_admin';
+  $items['admin/people/create']['file'] = 'user.admin.inc';
+}
